@@ -1,10 +1,10 @@
 [![logo](https://raw.githubusercontent.com/pascalgrimaud/docker-sonarqube/master/sonar.png)]
 (https://www.sonarqube.org/)
 
-```
+
 [![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-sonarqube.svg?style=svg)]
 (https://circleci.com/gh/pascalgrimaud/docker-sonarqube)
-```
+
 
 # Information
 
@@ -14,7 +14,7 @@ The base docker image :
 
 The GitHub project :
 
-  * [pascalgrimaud/docker-template](https://github.com/pascalgrimaud/docker-sonarqube/)
+  * [pascalgrimaud/docker-sonarqube](https://github.com/pascalgrimaud/docker-sonarqube/)
 
 
 # Installation
