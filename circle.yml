@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build -t pascalgrimaud/sonarqube:5.1 .
+test:
+  override:
+    - docker run -d -p 9000:9000 --name=sonarqube pascalgrimaud/sonarqube:5.1 ; sleep 30
+    - docker logs sonarqube
