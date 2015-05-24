@@ -4,7 +4,7 @@ echo "Starting container : SonarQube 5.1"
 
 
 # change the password
-if [ ! -f /.init_password ]; then
+if [ ! -f /.password ]; then
 	echo "Initializing the user password..."
 
 	# generate password
@@ -12,7 +12,7 @@ if [ ! -f /.init_password ]; then
 	# change password
     # ---> put code here
     # touch this file ...
-	touch /.init_password
+	touch /.password
 
 	echo "Initializing the user password : done!"
 fi
@@ -22,18 +22,17 @@ echo ""
 echo "######################################################################"
 echo "You can now connect to this CONTAINER using :"
 echo ""
-echo "    <information>"
+echo "    Username : admin"
 if [ ! -d ${PASS} ]; then
-	echo "    with the password '$PASS'"
-	echo ""
-	echo "Please remember to change the above password as soon as possible!"
+	echo "    Password : admin"
 else
-	echo "    and enter the password"
+	echo "    Password : ****************"
 fi
 echo ""
 echo "######################################################################"
 echo ""
 
 # start service
-exec /sonarqube-5.1/bin/linux-x86-64/sonar.sh console
+exec ${SONAR_HOME}/bin/linux-x86-64/sonar.sh console
+
 
